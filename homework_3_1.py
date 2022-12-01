@@ -11,9 +11,11 @@ while True:
     else:
         break
 
-lst = [int(i) for i in numbers]
-length = len(lst) // 2 if not len(lst) % 2 else (len(lst) // 2) + 1
+length = (
+    len(numbers) // 2 if not len(numbers) % 2
+    else (len(numbers) // 2) + 1
+)
 new_lst = []
 for i in range(length):
-    new_lst.append(lst[i] * lst[len(lst)-1-i])
+    new_lst.append(int(numbers[i]) * int(numbers[len(numbers)-1-i]))
 print(new_lst)
